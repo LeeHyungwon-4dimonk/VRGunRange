@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4891092595480945083}
   - component: {fileID: 2337185226878638770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3367356854653329740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.4, y: 0.04, z: -0.015}
+  m_LocalPosition: {x: -0.457, y: 0.04, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bulletPrefab: {fileID: 8461242612399235836, guid: e7981fbe365facc44ad5c798315d58ff, type: 3}
-  m_Muzzle: {fileID: 0}
+  m_muzzle: {fileID: 0}
+  speed: 10
 --- !u!1 &3574767485857708002
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +56,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5396870674643268684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrabPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +90,7 @@ GameObject:
   - component: {fileID: 1609084567105028464}
   - component: {fileID: 876870455141438452}
   - component: {fileID: 5347077353590307570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ak47_Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +196,7 @@ GameObject:
   - component: {fileID: 2721814491519849357}
   - component: {fileID: 4819905701947585017}
   - component: {fileID: 7216874124099521205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AK47_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +303,7 @@ GameObject:
   - component: {fileID: 910557786087825854}
   - component: {fileID: 7004698552560137569}
   - component: {fileID: 263517961936753450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +351,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &910557786087825854
 MonoBehaviour:
@@ -474,7 +475,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 1
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -562,7 +563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8536355055926055381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ak47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
