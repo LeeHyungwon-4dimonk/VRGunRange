@@ -2,7 +2,7 @@ using DesignPattern;
 
 public class GameManager : Singleton<GameManager>
 {
-    private static int m_score;
+    public static int m_score;
 
     public void Start()
     {

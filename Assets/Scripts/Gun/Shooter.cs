@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using DesignPattern;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class Shooter : MonoBehaviour

@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetController : MonoBehaviour
 {
     private Animator m_animator;
-    private bool m_isActive = false;
 
     private void Awake() => Init();
 
@@ -16,11 +13,15 @@ public class TargetController : MonoBehaviour
 
     private void Start()
     {
-        m_animator.SetBool("IsActive", !m_isActive);
+        m_animator.SetBool("IsActive", true);
     }
 
-    private void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            GameManager.Instance.AddScore(100);
+            m_animator.SetBool("IsActive", false);
+        }
     }
 }
