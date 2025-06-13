@@ -7,7 +7,6 @@ public class ParticleBulletController : PooledObject
 
     void OnCollisionEnter(Collision co)
     {
-
         ContactPoint contact = co.contacts[0];
         Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
         Vector3 pos = contact.point;

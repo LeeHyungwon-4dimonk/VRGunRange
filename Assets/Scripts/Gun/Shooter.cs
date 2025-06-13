@@ -46,12 +46,11 @@ public class Shooter : MonoBehaviour
     }
     */
 
-
-
     public void Fire()
     {
         PooledObject bullet = m_bulletPool.PopPool() as ParticleBulletController;
         bullet.transform.position = m_muzzle.position;
+        bullet.transform.rotation = m_muzzle.rotation;
         Debug.Log(bullet.transform.position);
         m_bulletRigid = bullet.GetComponent<Rigidbody>();
         m_bulletRigid.velocity = m_muzzle.forward * speed;
