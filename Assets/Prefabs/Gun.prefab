@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 3496852116427755312}
   - component: {fileID: 910557786087825854}
   - component: {fileID: 7004698552560137569}
-  - component: {fileID: 263517961936753450}
+  - component: {fileID: 8965820778006253525}
   m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
---- !u!114 &263517961936753450
+--- !u!114 &8965820778006253525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -549,11 +549,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9021993634538057423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d1e14ba0263b9841a819caa2b6caafa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MultiSelectPosition: 0
-  m_MultiSelectRotation: 0
 --- !u!1 &9030844560262861489
 GameObject:
   m_ObjectHideFlags: 0
