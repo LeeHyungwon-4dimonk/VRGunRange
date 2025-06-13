@@ -1,8 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Singleton : MonoBehaviour
+namespace DesignPattern
 {
-    
+    public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+    {
+        private static T m_instance;
+        public static T Instance
+        {
+            get
+            {
+                if (m_instance == null)
+                {
+                    m_instance = FindAnyObjectByType<T>();
+                    DontDestroyOnLoad(m_instance);
+                }
+                return m_instance;
+            }
+        }
+
+        protected void SingletonInit()
+        {
+            if (m_instance != null && m_instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                m_instance = this as T;
+                DontDestroyOnLoad(m_instance);
+            }
+        }
+    }
 }
