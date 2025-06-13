@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using DesignPattern;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : PooledObject
 {
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.name);
-        Destroy(gameObject);
+        ReturnPool();
     }
 }

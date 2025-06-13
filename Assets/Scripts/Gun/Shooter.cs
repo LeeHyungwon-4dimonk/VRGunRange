@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using DesignPattern;
 using UnityEngine;
 
-public class BulletControl : MonoBehaviour
+public class Shooter : MonoBehaviour
 {
-    [SerializeField] GameObject m_bulletPrefab;
-    [SerializeField] Transform m_muzzle;
+    [SerializeField] private Bullet m_bulletPrefab;
+
+    private ObjectPool m_bulletPool;
+    private Transform m_muzzle;
     private Rigidbody m_bulletRigid;
 
     [SerializeField] float speed;
@@ -15,15 +18,13 @@ public class BulletControl : MonoBehaviour
     private void Init()
     {
         m_muzzle = GetComponent<Transform>();
+        m_bulletPool = new ObjectPool(transform, m_bulletPrefab);
     }
 
     public void Fire()
     {
-        GameObject bullet;
-        bullet = Instantiate(m_bulletPrefab, m_muzzle.transform.position, m_muzzle.transform.rotation);
+        PooledObject bullet = m_bulletPool.PopPool() as Bullet;
         m_bulletRigid = bullet.GetComponent<Rigidbody>();
         m_bulletRigid.velocity = m_muzzle.forward * speed;
-        Debug.Log(bullet.transform.position);
-        Debug.Log("น฿ป็");
     }
 }

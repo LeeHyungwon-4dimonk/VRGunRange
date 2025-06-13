@@ -43,7 +43,8 @@ namespace DesignPattern
         private void CreatePooledObject()
         {
             PooledObject obj = MonoBehaviour.Instantiate(m_targetPrefab);
-            
+            obj.PoolInit(this);
+            PushPool(obj);
         }
     }
 }
