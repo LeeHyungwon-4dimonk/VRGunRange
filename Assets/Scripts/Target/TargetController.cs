@@ -18,7 +18,7 @@ public class TargetController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet") && m_animator.GetBool("IsActive"))
         {
             GameManager.Instance.AddScore(100);
             m_animator.SetBool("IsActive", false);
