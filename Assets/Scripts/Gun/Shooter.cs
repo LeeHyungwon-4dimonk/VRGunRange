@@ -8,6 +8,8 @@ public class Shooter : MonoBehaviour
 
     [SerializeField] private GameObject m_muzzleFire;
 
+    private AudioSource m_audioSource;
+
     [SerializeField] private float speed;
     [SerializeField] private float m_cooltime;
 
@@ -25,6 +27,7 @@ public class Shooter : MonoBehaviour
 
     private void Init()
     {
+        m_audioSource = GetComponent<AudioSource>();
         m_muzzle = GetComponent<Transform>();
         m_bulletPool = new ObjectPool(transform, m_bulletPrefab);        
     }
@@ -38,6 +41,7 @@ public class Shooter : MonoBehaviour
     {
         if (m_shootCooltime > m_cooltime)
         {
+            m_audioSource.Play();
             GameObject muzzleFire = Instantiate(m_muzzleFire, m_muzzle.position, m_muzzle.rotation);
         }
     }
