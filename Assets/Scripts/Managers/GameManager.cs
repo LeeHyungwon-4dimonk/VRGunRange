@@ -2,11 +2,23 @@ using DesignPattern;
 
 public class GameManager : Singleton<GameManager>
 {
-    public static int m_score;
+    private static int m_score;
+    private static bool m_isGameOver = true;
 
-    public void Start()
+    public void GameStart()
     {
         m_score = 0;
+        m_isGameOver = false;
+    }
+
+    public void GameOver()
+    {
+        m_isGameOver = true;
+    }
+
+    public bool IsGameOver()
+    {
+        return m_isGameOver;
     }
 
     public void AddScore(int score)
