@@ -11,14 +11,25 @@ public class TargetController : MonoBehaviour
         m_animator = GetComponent<Animator>();
     }
 
-    private void Start()
+    public void ActiveTarget()
     {
         m_animator.SetBool("IsActive", true);
     }
 
+    public void InactiveTarget()
+    {
+        m_animator.SetBool("IsActive", false);
+    }
+
+    public bool IsActiveTarget()
+    {
+        return m_animator.GetBool("IsActive");
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet") && m_animator.GetBool("IsActive"))
+        if (collision.gameObject.CompareTag("Bullet") && m_animator.GetBool("IsActive")
+            && !GameManager.Instance.IsGameOver())
         {
             GameManager.Instance.AddScore(100);
             m_animator.SetBool("IsActive", false);
