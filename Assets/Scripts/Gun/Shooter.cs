@@ -1,5 +1,6 @@
 using DesignPattern;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Shooter : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Shooter : MonoBehaviour
     private ObjectPool m_bulletPool;    
 
     [SerializeField] private GameObject m_muzzleFire;
+    [SerializeField] private XRGrabInteractable m_interactable;
 
     private AudioSource m_audioSource;
 
@@ -29,6 +31,7 @@ public class Shooter : MonoBehaviour
     {
         m_audioSource = GetComponent<AudioSource>();
         m_muzzle = GetComponent<Transform>();
+        m_interactable = GetComponentInParent<XRGrabInteractable>();
         m_bulletPool = new ObjectPool(transform, m_bulletPrefab);        
     }
 
@@ -37,13 +40,13 @@ public class Shooter : MonoBehaviour
         m_shootCooltime += Time.deltaTime;
     }
 
-    public void MuzzleFire()
+    private bool TryFire()
     {
-        if (m_shootCooltime > m_cooltime)
+        if(m_interactable.interactorsSelecting.Count >= 2)
         {
-            m_audioSource.Play();
-            GameObject muzzleFire = Instantiate(m_muzzleFire, m_muzzle.position, m_muzzle.rotation);
+            return true;
         }
+        return false;
     }
 
     // Muzzle 발사 부분도 ObjectPool로 처리하고 싶었으나, Object Pool로 처리하면
@@ -60,8 +63,10 @@ public class Shooter : MonoBehaviour
 
     public void Fire()
     {
-        if (m_shootCooltime > m_cooltime)
+        if (m_shootCooltime > m_cooltime && TryFire())
         {
+            m_audioSource.Play();
+            GameObject muzzleFire = Instantiate(m_muzzleFire, m_muzzle.position, m_muzzle.rotation);
             PooledObject bullet = m_bulletPool.PopPool() as ParticleBulletController;
             bullet.transform.position = m_muzzle.position;
             bullet.transform.rotation = m_muzzle.rotation;

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3367356854653329740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.457, y: 0.04, z: -0.02}
+  m_LocalPosition: {x: -0.428, y: 0.04, z: -0.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee7dcd14b56f954dbb445bab775b826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_bulletPrefab: {fileID: 7416690067498185464, guid: 1f8146bbc4b993341ad238016beb2445, type: 3}
+  m_bulletPrefab: {fileID: 9187159470931273795, guid: 11d8b66b72e39cc4ba84d336e955e7cd, type: 3}
+  m_muzzleFire: {fileID: 2463533550253857052, guid: db967f17b4513794a8abca2fd477a7e2, type: 3}
+  m_interactable: {fileID: 910557786087825854}
   speed: 10
+  m_cooltime: 2
 --- !u!1 &3574767485857708002
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5396870674643268684}
   m_Layer: 8
-  m_Name: GrabPoint
+  m_Name: GrabPoint(Handle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,6 +75,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.168, y: -0.042, z: -0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8536355055926055381}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &4308523760814086085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687087409038457872}
+  m_Layer: 8
+  m_Name: GrabPoint(Front)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1687087409038457872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308523760814086085}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.169, y: -0.042000055, z: -0.003000021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -467,7 +501,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 5396870674643268684}
-  m_SecondaryAttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 1687087409038457872}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
@@ -583,6 +617,7 @@ Transform:
   - {fileID: 7177286615676020281}
   - {fileID: 7107724226572600796}
   - {fileID: 5396870674643268684}
+  - {fileID: 1687087409038457872}
   - {fileID: 4891092595480945083}
   m_Father: {fileID: 4271129980170264044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
