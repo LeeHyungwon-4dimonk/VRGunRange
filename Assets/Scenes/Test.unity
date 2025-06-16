@@ -801,10 +801,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2998990458422637821, guid: 09bb9c4a401919a40ae0621ccbd1ee47, type: 3}
-      propertyPath: m_AnimateModel
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3046489616443274094, guid: 09bb9c4a401919a40ae0621ccbd1ee47, type: 3}
       propertyPath: m_muzzlePoint
       value: 
