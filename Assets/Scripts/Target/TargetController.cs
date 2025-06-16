@@ -56,10 +56,10 @@ public class TargetController : MonoBehaviour
     // 과녁 충돌 지점 - 중심부와의 거리와 가까울 수록 고득점으로 점수를 지급
     private int CalculateScore(float distance)
     {
-        if (distance <= 0.1f) return 500;
-        else if (distance <= 0.2f) return 400;
-        else if (distance <= 0.3f) return 300;
-        else if (distance <= 0.4f) return 200;
+        if (distance <= 0.15f) return 500;
+        else if (distance <= 0.25f) return 400;
+        else if (distance <= 0.35f) return 300;
+        else if (distance <= 0.45f) return 200;
         else return 100;
     }
 }
