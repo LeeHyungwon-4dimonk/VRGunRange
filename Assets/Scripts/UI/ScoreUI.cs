@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 
 /// <summary>
-/// 스코어를 표사히는 UI에 현재 점수를 반영하는 스크립트
+/// 스코어를 표시히는 UI에 현재 점수를 반영하는 스크립트
 /// </summary>
 public class ScoreUI : MonoBehaviour
 {

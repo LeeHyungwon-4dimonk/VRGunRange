@@ -1,9 +1,8 @@
-using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 /// <summary>
 /// 과녁의 애니메이션 조정용
+/// 과녁 점수 계산
 /// </summary>
 public class TargetController : MonoBehaviour
 {
