@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// 자식 오브젝트로 과녁을 둔다.
+/// 자식 오브젝트에 있는 과녁을 관리하면서
+/// 랜덤하게 과녁의 활성화를 담당하는 컴포넌트
+/// </summary>
 public class TargetManager : MonoBehaviour
 {
     // 시간제한 설정(밸런스)

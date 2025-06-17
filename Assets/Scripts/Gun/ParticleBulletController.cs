@@ -3,7 +3,8 @@ using UnityEngine;
 
 /// <summary>
 /// 파티클 적용 총알 발사용 스크립트
-/// 기존 에셋에 적용되어 있던 코드를 변형하여 적용
+/// 기존 에셋에 적용되어 있던 코드를
+/// 오브젝트 풀 패턴 사용 내용만 반영하여 적용
 /// </summary>
 public class ParticleBulletController : PooledObject
 {

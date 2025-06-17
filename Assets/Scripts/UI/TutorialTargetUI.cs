@@ -1,9 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
+/// <summary>
+/// 튜토리얼 타겟용 UI 점수 출력용
+/// 플레이어가 연습을 하면서 맞힌 점수를 표기하기 위한 용도로
+/// 점수가 따로 저장되지 않도록 맞힌 점수만 표기할 수 있도록 만든 기능
+/// </summary>
 public class TutorialTargetUI : MonoBehaviour
 {
     private TargetController m_targetController;

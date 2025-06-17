@@ -9,7 +9,7 @@ namespace DesignPattern
         private PooledObject m_targetPrefab;
         private GameObject m_poolObject;
 
-        public ObjectPool(Transform parent, PooledObject targetPrefab, int initSize = 8) 
+        public ObjectPool(Transform parent, PooledObject targetPrefab, int initSize = 4) 
             => Init(parent, targetPrefab, initSize);
 
         private void Init(Transform parent, PooledObject targetPrefab, int initSize)

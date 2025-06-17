@@ -25,6 +25,7 @@ public class TutorialUI : MonoBehaviour
 
     private void Awake() => Init();
 
+    // 페이지 수 표기
     private void Init()
     {
         m_StepNumTextField.text = $"{m_CurrentStepIndex + 1} / {m_StepList.Count}";
@@ -33,6 +34,7 @@ public class TutorialUI : MonoBehaviour
     // 버튼에 On Click로 연결할 기능
     // 버튼을 눌러서 튜토리얼 UI를 다음 페이지로 넘어갈 수 있게 하며,
     // UI가 마지막 페이지까지 넘어가도 다시 첫 페이지로 돌아올 수 있게 설정
+    // 페이지 수를 표기하는 컴포넌트가 있어 현재 페이지 수를 표기함
     public void Next()
     {
         m_StepList[m_CurrentStepIndex].StepObject.SetActive(false);
