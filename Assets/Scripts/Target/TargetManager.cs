@@ -23,6 +23,7 @@ public class TargetManager : MonoBehaviour
     // 인스펙터 참조
     [SerializeField] private GameObject m_timeUI;
     [SerializeField] TMP_Text m_timeText;
+    [SerializeField] private GameObject m_gameOverUI;
 
     private void Awake() => Init();
 
@@ -30,6 +31,7 @@ public class TargetManager : MonoBehaviour
     {
         m_targetControllers = GetComponentsInChildren<TargetController>();        
         m_timeUI.SetActive(false);
+        m_gameOverUI.SetActive(false);
     }
 
     private void Update()
@@ -54,6 +56,7 @@ public class TargetManager : MonoBehaviour
                 {
                     InactivateTarget();
                     StopCoroutine(m_coroutine);
+                    m_gameOverUI.SetActive(true);
                     m_coroutine = null;
                 }
             }
@@ -67,6 +70,7 @@ public class TargetManager : MonoBehaviour
         {
             GameManager.Instance.GameStart();
             m_timeLimit = m_setTimelimit;
+            m_gameOverUI.SetActive(false);
             m_timeUI.SetActive(true);
         }
     }
@@ -82,6 +86,7 @@ public class TargetManager : MonoBehaviour
             {
                 InactivateTarget();
                 StopCoroutine(m_coroutine);
+                m_gameOverUI.SetActive(false);
                 m_coroutine = null;
             }
         }

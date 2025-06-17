@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2267137068435282869}
   - component: {fileID: 441887535769433040}
   - component: {fileID: 5478186657636069051}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 2210898253559836061}
   - component: {fileID: 1003060765846267486}
   - component: {fileID: 6314493790177378825}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: ScoreUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4098652683401395660}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 8.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 1940063126349617916}
   - component: {fileID: 130213812900651094}
   - component: {fileID: 2825608270948949280}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

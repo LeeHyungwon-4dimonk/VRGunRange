@@ -15,8 +15,8 @@ public class TutorialUI : MonoBehaviour
         public string ButtonText;
     }
     // 참조 컴포넌트
-    [SerializeField] private TextMeshProUGUI m_StepButtonTextField;
-    [SerializeField] private TextMeshProUGUI m_StepNumTextField;
+    [SerializeField] private TMP_Text m_StepButtonTextField;
+    [SerializeField] private TMP_Text m_StepNumTextField;
 
     // 입력 컴포넌트
     [SerializeField] List<Step> m_StepList = new List<Step>();

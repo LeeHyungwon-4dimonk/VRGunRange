@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class GameManager : Singleton<GameManager>
 {
     private static int m_score;
+    private static int m_highScore;
     private static bool m_isGameOver;
 
     public UnityAction<int> OnScoreChanged;
@@ -13,6 +14,7 @@ public class GameManager : Singleton<GameManager>
     private void Init()
     {
         m_score = 0;
+        m_highScore = 0;
         m_isGameOver = true;
     }
 
@@ -26,10 +28,14 @@ public class GameManager : Singleton<GameManager>
     public void GameOver()
     {
         m_isGameOver = true;
+        if(m_highScore < m_score)
+        {
+            m_highScore = m_score;
+        }
     }
 
     public bool IsGameOver()
-    {
+    {        
         return m_isGameOver;
     }
 
@@ -40,4 +46,6 @@ public class GameManager : Singleton<GameManager>
     }
 
     public int GetScore() => m_score;
+
+    public int GetHighScore() => m_highScore;
 }
