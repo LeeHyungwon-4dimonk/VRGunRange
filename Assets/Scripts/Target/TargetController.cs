@@ -55,7 +55,7 @@ public class TargetController : MonoBehaviour
     }
 
     // 과녁 충돌 지점 - 중심부와의 거리와 가까울 수록 고득점으로 점수를 지급
-    private int CalculateScore(float distance)
+    public int CalculateScore(float distance)
     {
         if (distance <= 0.15f) { m_audioSource.Play(); return 500; }
         else if (distance <= 0.25f) return 400;
