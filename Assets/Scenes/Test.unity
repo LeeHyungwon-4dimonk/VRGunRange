@@ -988,17 +988,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialUI
       objectReference: {fileID: 0}
-    - target: {fileID: 5130403307467734991, guid: 7f923ace61547de44984c778f254395a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5451373000410717143, guid: 7f923ace61547de44984c778f254395a, type: 3}
-      propertyPath: m_text
-      value: "If you get used to aim, then try shooting!\nYou can't shoot gun only
-        grabbing it in one hand.\nSo, hold it tightly!\n\nTips.\n1. Shooting has
-        a cooltime, \nso try shooting cautiously.\n\n2. If your gun aiming has problem,\ntry
-        unholding front grab hand and try again"
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

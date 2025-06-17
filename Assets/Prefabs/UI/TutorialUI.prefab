@@ -1651,24 +1651,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'If you get used to aim, then try shooting!
-
-    You can''t shoot gun only
-    grabbing it in one hand.
-
-    So, hold it tightly!
-
-
-    Tips.
-
-    1. Shooting
-    has a cooltime, so try shooting cautiously.
-
-
-    2. If your gun aiming has problem,
-
-    try
-    unholding front grab hand and try again'
+  m_text: "If you get used to aim, then try shooting!\nYou can't shoot gun only grabbing
+    it in one hand.\nSo, hold it tightly!\n\nTips.\n1. Shooting has a cooltime, \nso
+    try shooting cautiously.\n\n2. If your gun aiming has problem,\ntry unholding
+    front grab hand and try again"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
