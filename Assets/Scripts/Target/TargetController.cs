@@ -7,6 +7,7 @@ using UnityEngine;
 public class TargetController : MonoBehaviour
 {
     private Animator m_animator;
+    private AudioSource m_audioSource;
 
     [SerializeField] Transform m_target;
 
@@ -15,6 +16,7 @@ public class TargetController : MonoBehaviour
     private void Init()
     {
         m_animator = GetComponent<Animator>();
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     // 과녁 활성화
@@ -55,7 +57,7 @@ public class TargetController : MonoBehaviour
     // 과녁 충돌 지점 - 중심부와의 거리와 가까울 수록 고득점으로 점수를 지급
     private int CalculateScore(float distance)
     {
-        if (distance <= 0.15f) return 500;
+        if (distance <= 0.15f) { m_audioSource.Play(); return 500; }
         else if (distance <= 0.25f) return 400;
         else if (distance <= 0.35f) return 300;
         else if (distance <= 0.45f) return 200;
