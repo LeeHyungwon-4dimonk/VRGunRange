@@ -46,7 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bulletPrefab: {fileID: 9187159470931273795, guid: 11d8b66b72e39cc4ba84d336e955e7cd, type: 3}
   m_muzzleFire: {fileID: 2463533550253857052, guid: db967f17b4513794a8abca2fd477a7e2, type: 3}
-  m_interactable: {fileID: 910557786087825854}
   speed: 10
   m_cooltime: 2
 --- !u!1 &3574767485857708002
@@ -508,7 +507,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 0
+  m_MovementType: 1
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
